@@ -7,17 +7,17 @@
 |Element|Mark-up|Example rendered output
 
 |Anchor
-a| for simple anchors:
+a| For simple anchors:
 ....
 [[section_header]]
 Section Header
 ....
-for anchors in modular content to avoid clashes:
+For anchors in modular content to avoid clashes:
 ....
 [#section_header_{parameter}]
 Section Header
 ....
-a| both cases:
+a| For both cases:
 
 *Section Header*
 
@@ -28,27 +28,30 @@ a| The foo application.
 |Code blocks
 a|
 ....
-Use the following syntax for the `oc` command:
-
-[subs="+quotes,attributes"]
+[source,java,options="nowrap"]
 ----
-$ oc <action> <object_type> <object_name_or_id>
+private static final Logger LOGGER = Logger.getLogger(HelloWorld.class);
+LOGGER.debug("This is a debugging message.");
+LOGGER.info("This is an informational message.");
+LOGGER.error("Configuration file not found.");
 ----
 ....
 
-a|Use the following syntax for the `oc` command:
-[subs="+quotes,attributes"]
+a|
+[source,java,options="nowrap"]
 ----
-$ oc <action> <object_type> <object_name_or_id>
+LOGGER.debug("This is a debugging message.");
+LOGGER.info("This is an informational message.");
+LOGGER.error("Configuration file not found.");
 ----
 
 |Code - inline
-a| 
+a|
 ....
 `print("Hello, World!")`
 ....
 
-a| `print("Hello, World!")`  
+a| `print("Hello, World!")`
 
 |Command block
 a|
@@ -78,7 +81,7 @@ Use _this_ approach.
 
 a|Use _this_ approach.
 
-|Filenames or directory paths
+|File names or directory paths
 
 a|
 ....
@@ -93,22 +96,22 @@ The [filename]`express.conf` configuration file is located in the [filename]`/us
 
 |GUI Text
 
-a| 
+a|
 ....
 The web browser displays *404* for an unreachable URL.
 ....
 
 a|The web browser displays *404* for an unreachable URL.
 
-|GUI Button 
-a| 
+|GUI Button ^1^
+a|
 ....
 Press btn:[Save As] to save the file under a different name.
 ....
 
 a|Press btn:[Save As] to save the file under a different name.
 
-|GUI Menu 
+|GUI Menu ^1^
 
 a|
 ....
@@ -267,3 +270,5 @@ Stop the `NetworkManager` daemon.
 Start the `mysql` service.
 
 |===
+
+^1^ You must set the `experimental` attribute in the document header to enable the `btn`, `menu`, and other UI macros.
